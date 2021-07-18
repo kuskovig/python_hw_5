@@ -36,7 +36,7 @@ def redistribute_books(users, books):  # evenly redistributing all books to user
 
 def make_output_json(userswithbooks):  # creating output .json file
     with open('outputfile.json', "w") as writer:
-        json.dump(userswithbooks, writer)
+        json.dump(userswithbooks, writer, indent=4)
 
 
 make_output_json(redistribute_books(parse_users(), parse_books()))  # calling all functions to create output file
